@@ -1,31 +1,26 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: https://example.com/terms/
-  contact:
-    email: contact@example.com
-    url: http://example.com/contact
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Quotation Engine Api
+  # termsOfService: https://example.com/terms/
+  # contact:
+  #   email: contact@example.com
+  #   url: http://example.com/contact
+  # license:
+  #   name: Apache 2.0
+  #   url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
-    url: https://redocly.github.io/openapi-template/logo.png
+    url: https://apiportaluat.tuneprotect.com/apidocs/d2c/images/general-68af2602.png
   description: >
     This is an **example** API to demonstrate features of the OpenAPI
     specification.
 
     # Introduction
 
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
+    Welcome to the brief **Quotation Engine Api** integration guide, designed to help you set up the offering our products on your platform.
 
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-    the standard OpenAPI syntax, we use a few 
-    [vendor extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+
+    Our integrations team are at hand to support you along the way.
 
     # OpenAPI Specification
 
