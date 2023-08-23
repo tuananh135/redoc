@@ -1,0 +1,83 @@
+type: object
+properties:
+  combiNo:
+    description: Combination number
+    type: integer
+    example: 180
+  ghsType:
+    description: GHS type
+    type: string
+    example: 3YR
+  ghsPlan:
+    description: GHS Plan
+    type: string
+    example: Plan4
+  gpspType:
+    description: GPSP type
+    type: string
+    example: No selection
+  gpspPlan:
+    description: GPSP Plan
+    type: string
+    example: Plan6
+  gtl:
+    description: GTL
+    type: string
+    example: D150
+  ghsPremium:
+    description: GHS Premium
+    type: string
+    example: '902'
+  gpspPremium:
+    description: GPSP Premium
+    type: string
+    example: '0'
+  gtlPremium:
+    description: GTL Premium
+    type: string
+    example: '499.5'
+  premium:
+    description: Premium
+    type: string
+    example: '1401.5'
+  mcoFeesGhs:
+    description: mcoFeesGhs
+    type: string
+    example: '0'
+  mcoFeesGpsp:
+    description: mcoFeesGpsp
+    type: string
+    example: '1'
+  mcoFees:
+    description: mcoFees
+    type: string
+    example: '0'
+  activ8Programm:
+    description: activ8Programm
+    type: string
+    example: '90'
+  totalPremiumPayable:
+    description: Total Premium Payable
+    type: string
+    example: '1012.2121'
+  ghsNett:
+    description: GHS NETT
+    type: string
+    example: '811.2'
+  gpspNett:
+    description: GPSP NETT
+    type: string
+    example: '221'
+  gtlNett:
+    description: GTL NETT
+    type: string
+    example: '2130'
+  premiumNett:
+    description: Premium NETT
+    type: string
+    example: '3123'
+  totalPremiumPayableNett:
+    description: Total Premium Payable NETT
+    type: string
+    example: '121332'
+    

@@ -1,0 +1,49 @@
+get:
+  tags:
+    - User
+  summary: Login
+  description: Redirect to SME page and auto login
+  operationId: login
+  parameters:
+    - name: username
+      in: query
+      description: Username to login, if not existed on SME page, system will auto create a new one
+      required: true
+      schema:
+        type: string
+        example: tunepartneruser@tuneprotect.com
+    - name: budget
+      in: query
+      description: Budget
+      required: true
+      schema:
+        type: string
+        example: '2000'
+    - name: type
+      in: query
+      description: Type
+      required: true
+      schema:
+        type: string
+        example: '0'
+    - name: accessToken
+      in: query
+      description: Take from gettoken api, used for authentication of partners
+      required: true
+      schema:
+        type: string
+        example: eyJhbGciOiJSUzI1NiIsImtpZCI6IkExMkRDNjFDMzdGQTJEN0RDREEzNDExRjcxNTFDQ0ZGRDZDMUQyRjZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Im9TM0dIRGY2TFgzTm8wRWZjVkhNXzliQjB2WSJ9.eyJuYmYiOjE2OTI2Nzc5OTIsImV4cCI6MTY5MjY4MDk5MiwiaXNzIjoiaHR0cHM6Ly91YXQtbGlmZS50dW5lcHJvdGVjdC5jb20vaWRlbnRpdHkiLCJhdWQiOiJBUEkxIiwiY2xpZW50X2lkIjoiTXlDbGllbnQiLCJzdWIiOiI3NmVmOGM0NC01NGViLTRlMGMtODdlMC03Njg0YjI1YzUzMGUiLCJhdXRoX3RpbWUiOjE2OTI2Nzc5OTIsImlkcCI6ImxvY2FsIiwiZW1haWwiOiJ0dWFuYW5obmF0c3VAZ21haWwuY29tIiwiaWQiOiI3NmVmOGM0NC01NGViLTRlMGMtODdlMC03Njg0YjI1YzUzMGUiLCJuYW1lIjoidHVhbmFuaG5hdHN1QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiVHJ1ZSIsInJvbGUiOiJQQVJUTkVSIiwicGhvbmVfbnVtYmVyIjoiIiwidXBkYXRlZF9hdCI6Ikp1bHksIDIwMjMiLCJqdGkiOiJFNTlBQTU0NzNDMTk1MDg5MTA3MjZEN0ZEQjZEQ0FDQiIsImlhdCI6MTY5MjY3Nzk5Miwic2NvcGUiOlsiZW1haWwiLCJJZGVudGl0eVNlcnZlckFwaSIsIm9wZW5pZCIsInByb2ZpbGUiLCJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicHdkIl19.aOH8NItRu2w2F8bKcmryo_JIse338gwIqpJEuUnS5ddFWQjCA6DYKOiKLFSIkACwHvSlbKAB5ZOpKjsvOl2QtcO199T9lIDr5SOhQrEsev6jze6CamUjJp5BCNGDl_FKaSgTOOsEArmxPIqsePO2yQeCxda6CEOQLgwg1cmbwum0VZ8eeFcAJCpUh_kEJaOyKX6sbXpLQr1cIy92FQGgz5svEjau-lIxxyIjN0YypUQkBiAd-1tStdRaFn0SiK4m9luZnCuOD0OBNiICyt8GqoIhduuiauhvi6o9CGusz8hY0_yNFEe903IgU4Iq2ALkbugd8YLKt9df7hjeJs5NIA
+  responses:
+    '200':
+      description: OK and auto redirect to SME page
+    '401':
+      description: Unauthorized
+    '400': 
+      description: Bad request
+  # x-codeSamples:
+  #   - lang: C#
+  #     source:
+  #       $ref: ../code_samples/C_sharp/echo/post.cs
+  #   - lang: PHP
+  #     source:
+  #       $ref: ../code_samples/PHP/echo/post.php

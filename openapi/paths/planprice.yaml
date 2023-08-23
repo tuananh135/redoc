@@ -1,0 +1,43 @@
+get:
+  tags:
+    - Plan price
+  summary: Get plan price
+  description: Receive the list of plan prices
+  operationId: planpriceid
+  security:
+    - jwt: []
+  parameters:
+    - name: budgetList
+      in: query
+      description: List of budget splitted by ','
+      required: true
+      schema:
+        type: string
+        example: 2000,1000
+    - name: type
+      in: query
+      description: Type of plan (accept for 0,1)
+      required: true
+      schema:
+        type: integer
+        example: 0
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/GetPlanPriceResponse.yaml
+    '401':
+      description: Unauthorized
+    '400': 
+      description: Bad request
+  # x-codeSamples:
+  #   - lang: C#
+  #     source:
+  #       $ref: ../code_samples/C_sharp/echo/post.cs
+  #   - lang: PHP
+  #     source:
+  #       $ref: ../code_samples/PHP/echo/post.php

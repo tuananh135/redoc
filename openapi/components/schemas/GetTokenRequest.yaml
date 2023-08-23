@@ -1,0 +1,12 @@
+type: object
+properties:
+  username:
+    description: Username
+    type: string
+    minLength: 1
+    example: tune@tuneprotect.com
+  password:
+    description: Password
+    type: string
+    minLength: 1
+    example: Tune@123456

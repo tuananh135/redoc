@@ -21,41 +21,27 @@ info:
 
 
     Our integrations team are at hand to support you along the way.
-
-    # OpenAPI Specification
-
-    The goal of The OpenAPI Specification is to define a standard, language-agnostic interface to REST APIs which
-    allows both humans and computers to discover and understand the capabilities
-    of the service without access to source
-    code, documentation, or through network traffic inspection. When properly
-    defined via OpenAPI, a consumer can 
-    understand and interact with the remote service with a minimal amount of
-    implementation logic. Similar to what
-    interfaces have done for lower-level programming, OpenAPI removes the
-    guesswork in calling the service.
 tags:
-  - name: Echo
-    description: Example echo operations.
+  - name: Token
+    description: Token for authentication used for apis 
+  - name: Plan price
+    description: Operations about plan.
   - name: User
     description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://uat-life.tuneprotect.com/b2capi
+  - url: https://life.tuneprotect.com/b2capi
 paths:
-  /users/{username}:
-    $ref: paths/users_{username}.yaml
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
+  /gettoken:
+    $ref: paths/token.yaml
+  /getplanprice:
+    $ref: paths/planprice.yaml
+  /login:
+    $ref: paths/user.yaml
+  # /pathItem:
+  #   $ref: paths/pathItem.yaml
+  # /pathItemWithExamples:
+  #   $ref: paths/pathItemWithExamples.yaml
 components:
   securitySchemes:
     main_auth:
@@ -73,3 +59,9 @@ components:
     basic_auth:
       type: http
       scheme: basic
+    jwt:
+      description: |
+        Generate your JWT from gettoken api
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

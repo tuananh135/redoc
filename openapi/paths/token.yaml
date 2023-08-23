@@ -1,0 +1,40 @@
+post:
+  tags:
+    - Token
+  summary: Get token
+  description: Receive the bearer token used for authenticate the apis
+  operationId: tokenid
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/GetTokenResponse.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                description: Error message
+                type: string
+                example: Wrong credential
+    '400': 
+      description: Bad request
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/GetTokenRequest.yaml
+    description: Account was provided for partner.
+    required: true
+  # x-codeSamples:
+  #   - lang: C#
+  #     source:
+  #       $ref: ../code_samples/C_sharp/echo/post.cs
+  #   - lang: PHP
+  #     source:
+  #       $ref: ../code_samples/PHP/echo/post.php
